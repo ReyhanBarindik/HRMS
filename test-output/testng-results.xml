@@ -1,56 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="4" total="7" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-05-30T14:38:33 EDT" name="Suite" finished-at="2020-05-30T14:39:22 EDT" duration-ms="49288">
+  <suite started-at="2020-06-02T02:13:38 EDT" name="Suite" finished-at="2020-06-02T02:14:35 EDT" duration-ms="57271">
     <groups>
-      <group name="regression">
-        <method signature="AddEmployeeTest.addEmployee()[pri:3, instance:com.hrms.testcases.AddEmployeeTest@6d2a209c]" name="addEmployee" class="com.hrms.testcases.AddEmployeeTest"/>
-        <method signature="LoginTest.emptyUsername()[pri:0, instance:com.hrms.testcases.LoginTest@75329a49]" name="emptyUsername" class="com.hrms.testcases.LoginTest"/>
-        <method signature="LoginTest.invalidPasswordAdminLogin()[pri:0, instance:com.hrms.testcases.LoginTest@75329a49]" name="invalidPasswordAdminLogin" class="com.hrms.testcases.LoginTest"/>
-      </group> <!-- regression -->
     </groups>
-    <test started-at="2020-05-30T14:38:33 EDT" name="Test" finished-at="2020-05-30T14:39:22 EDT" duration-ms="49288">
-      <class name="com.hrms.testcases.LoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.hrms.testcases.LoginTest@75329a49]" started-at="2020-05-30T14:38:59 EDT" name="setUp" finished-at="2020-05-30T14:39:11 EDT" duration-ms="12342" status="PASS">
+    <test started-at="2020-06-02T02:13:38 EDT" name="Test" finished-at="2020-06-02T02:14:35 EDT" duration-ms="57271">
+      <class name="com.hrms.testcases.DefineDifferentReports">
+        <test-method is-config="true" signature="generateReport()[pri:0, instance:com.hrms.testcases.DefineDifferentReports@1ed1993a]" started-at="2020-06-02T02:13:38 EDT" name="generateReport" finished-at="2020-06-02T02:13:38 EDT" duration-ms="231" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateReport -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.hrms.testcases.DefineDifferentReports@1ed1993a]" started-at="2020-06-02T02:13:39 EDT" name="setUp" finished-at="2020-06-02T02:13:47 EDT" duration-ms="7726" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="emptyUsername()[pri:0, instance:com.hrms.testcases.LoginTest@75329a49]" started-at="2020-05-30T14:39:11 EDT" name="emptyUsername" finished-at="2020-05-30T14:39:11 EDT" duration-ms="295" status="PASS">
+        <test-method signature="addDifferentReports(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.hrms.testcases.DefineDifferentReports@1ed1993a]" started-at="2020-06-02T02:13:47 EDT" name="addDifferentReports" data-provider="getData" finished-at="2020-06-02T02:13:56 EDT" duration-ms="9187" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Canvas Group]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Education]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[CurrentEmployeesOnly]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Languages]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Language]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- emptyUsername -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hrms.testcases.LoginTest@75329a49]" started-at="2020-05-30T14:39:12 EDT" name="tearDown" finished-at="2020-05-30T14:39:12 EDT" duration-ms="717" status="PASS">
+        </test-method> <!-- addDifferentReports -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hrms.testcases.DefineDifferentReports@1ed1993a]" started-at="2020-06-02T02:13:56 EDT" name="tearDown" finished-at="2020-06-02T02:13:57 EDT" duration-ms="945" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.hrms.testcases.LoginTest@75329a49]" started-at="2020-05-30T14:39:12 EDT" name="setUp" finished-at="2020-05-30T14:39:19 EDT" duration-ms="7055" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.hrms.testcases.DefineDifferentReports@1ed1993a]" started-at="2020-06-02T02:13:57 EDT" name="setUp" finished-at="2020-06-02T02:14:06 EDT" duration-ms="8401" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="invalidPasswordAdminLogin()[pri:0, instance:com.hrms.testcases.LoginTest@75329a49]" started-at="2020-05-30T14:39:19 EDT" name="invalidPasswordAdminLogin" finished-at="2020-05-30T14:39:21 EDT" duration-ms="1714" status="PASS">
+        <test-method signature="addDifferentReports(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.hrms.testcases.DefineDifferentReports@1ed1993a]" started-at="2020-06-02T02:14:06 EDT" name="addDifferentReports" data-provider="getData" finished-at="2020-06-02T02:14:16 EDT" duration-ms="9821" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[My Project]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Gender]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[CurrentEmployeesOnly]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Personal]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Employee Id]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- invalidPasswordAdminLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hrms.testcases.LoginTest@75329a49]" started-at="2020-05-30T14:39:21 EDT" name="tearDown" finished-at="2020-05-30T14:39:22 EDT" duration-ms="730" status="PASS">
+        </test-method> <!-- addDifferentReports -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hrms.testcases.DefineDifferentReports@1ed1993a]" started-at="2020-06-02T02:14:16 EDT" name="tearDown" finished-at="2020-06-02T02:14:17 EDT" duration-ms="820" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.hrms.testcases.LoginTest -->
-      <class name="com.hrms.testcases.AddEmployeeTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.hrms.testcases.AddEmployeeTest@6d2a209c]" started-at="2020-05-30T14:38:33 EDT" name="setUp" finished-at="2020-05-30T14:38:42 EDT" duration-ms="9399" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.hrms.testcases.DefineDifferentReports@1ed1993a]" started-at="2020-06-02T02:14:17 EDT" name="setUp" finished-at="2020-06-02T02:14:24 EDT" duration-ms="6994" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="addEmployee()[pri:3, instance:com.hrms.testcases.AddEmployeeTest@6d2a209c]" started-at="2020-05-30T14:38:42 EDT" name="addEmployee" finished-at="2020-05-30T14:38:57 EDT" duration-ms="15141" status="PASS">
+        <test-method signature="addDifferentReports(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.hrms.testcases.DefineDifferentReports@1ed1993a]" started-at="2020-06-02T02:14:24 EDT" name="addDifferentReports" data-provider="getData" finished-at="2020-06-02T02:14:33 EDT" duration-ms="9581" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Our Team Project]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Skill]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[CurrentEmployeesOnly]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Salary]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Pay Grade]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addEmployee -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hrms.testcases.AddEmployeeTest@6d2a209c]" started-at="2020-05-30T14:38:58 EDT" name="tearDown" finished-at="2020-05-30T14:38:59 EDT" duration-ms="652" status="PASS">
+        </test-method> <!-- addDifferentReports -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hrms.testcases.DefineDifferentReports@1ed1993a]" started-at="2020-06-02T02:14:34 EDT" name="tearDown" finished-at="2020-06-02T02:14:35 EDT" duration-ms="1184" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.hrms.testcases.AddEmployeeTest -->
+        <test-method is-config="true" signature="writeReport()[pri:0, instance:com.hrms.testcases.DefineDifferentReports@1ed1993a]" started-at="2020-06-02T02:14:35 EDT" name="writeReport" finished-at="2020-06-02T02:14:35 EDT" duration-ms="361" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- writeReport -->
+      </class> <!-- com.hrms.testcases.DefineDifferentReports -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -5,11 +5,12 @@
     <classes>
       <class name="com.hrms.testcases.LoginTest">
         <methods>
-          <include name="emptyUsername"/>
-          <include name="InvalidPasswordAdminLogin"/>
+          <include name="generateReport"/>
+          <include name="writeReport"/>
           <include name="tearDown"/>
           <include name="validAdminLogin"/>
           <include name="setUp"/>
+          <include name="invalidPasswordAdminLogin"/>
         </methods>
       </class> <!-- com.hrms.testcases.LoginTest -->
     </classes>

@@ -21,7 +21,9 @@ public class DashBoardPageElements extends CommonMethods {
 
 	@FindBy(id = "menu_pim_addEmployee")
 	public WebElement addEmp;
-
+	
+	@FindBy (id ="menu_core_viewDefinedPredefinedReports")
+    public WebElement report;
 	
 	public DashBoardPageElements() {
 
@@ -33,5 +35,11 @@ public class DashBoardPageElements extends CommonMethods {
 		jsClick(pim);
 		jsClick(addEmp);
 	}
-
+    
+	public void navigateToReports () {
+		jsClick(pim);
+		jsClick(report);
+	}
+	
+	
 }

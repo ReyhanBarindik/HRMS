@@ -1,10 +1,15 @@
 package com.hrms.testcases;
 
 
+
+
+
+
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.hrms.pages.LoginPageElements;
+
 import com.hrms.utils.CommonMethods;
 import com.hrms.utils.ConfigsReader;
 
@@ -25,7 +30,8 @@ public class LoginTest extends CommonMethods{
 	
 	@Test(groups = "smoke")
 	public void validAdminLogin() {
-		LoginPageElements login = new LoginPageElements();
+		test.info("Entering valid admin credentials");
+		//LoginPageElements login = new LoginPageElements();
 		sendText(login.username, ConfigsReader.getProperty("username"));
 		sendText(login.password, ConfigsReader.getProperty("password"));
 		waitAndClick(login.loginBtn);
@@ -36,10 +42,12 @@ public class LoginTest extends CommonMethods{
 	}
 	@Test (groups ="regression")
 	public void invalidPasswordAdminLogin() {
+		test.info("Adding valid username and invalid password");
 		sendText(login.username, ConfigsReader.getProperty("username"));
 		sendText(login.password, "dbscjdkb");
 		waitAndClick(login.loginBtn);
 		Assert.assertTrue(login.errorMessage.isDisplayed());
+		test.info("Validating Invalid credentials error message");
 		String expectedMessage = "Invalid credentials";
 		String actualMessage = login.errorMessage.getText();
 		Assert.assertEquals(actualMessage, expectedMessage);
@@ -53,7 +61,6 @@ public class LoginTest extends CommonMethods{
 		String actualMessage = login.errorMessage.getText();
 		Assert.assertEquals(actualMessage, expectedMessage, "Error Messages text doesn't match");
 	}
-	
 	
 	
 	

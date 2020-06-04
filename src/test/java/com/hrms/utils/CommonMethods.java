@@ -2,6 +2,8 @@ package com.hrms.utils;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -46,7 +48,7 @@ public class CommonMethods extends PageInitializer {
 			actualValue = el.getAttribute("value").trim();
 			if (el.isEnabled() && actualValue.equals(value)) {
 				el.click();
-				
+
 				break;
 			}
 		}
@@ -247,25 +249,46 @@ public class CommonMethods extends PageInitializer {
 		getJSObject().executeScript("window.scrollBy(0,-" + pixel + ")");
 	}
 
-	public static void takeScreenshot(String folderName, String testName, String firstName,String lastName) {
+	public static void takeScreenshot(String folderName, String testName, String firstName, String lastName) {
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File sourceFile = ts.getScreenshotAs(OutputType.FILE);
+
 		try {
-			FileUtils.copyFile(sourceFile, new File("Screenshots/"+folderName+"/"+testName + firstName+lastName + ".png"));
+			FileUtils.copyFile(sourceFile,
+					new File("Screenshots/" + folderName + "/" + testName + firstName + lastName + ".png"));
 		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	public static String takeScreenshot(String fileName) {
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File file = ts.getScreenshotAs(OutputType.FILE);
+		String destinationFile = Constants.SCREENSHOT_FILEPATH + fileName +getTimeStemp()+ ".png";
+		try {
+			FileUtils.copyFile(file, new File(destinationFile));
+		} catch (Exception ex) {
+			System.out.println("Cannot take screenshot!");
+		}
+		return destinationFile;
+	}
+
+	public static String getTimeStemp () {
+		Date date = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
+		return sdf.format(date.getTime());
+	}
+	
+	public static void wait(int num) {
+		try {
+			Thread.sleep(num * 1000);
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 	
-	public static void takeScreenshot(String fileName) {
-		TakesScreenshot ts = (TakesScreenshot) driver;
-		File file = ts.getScreenshotAs(OutputType.FILE);
-		try {
-			FileUtils.copyFile(file, new File("screenshots/" + fileName + ".png"));
-		} catch (Exception ex) {
-			System.out.println("Cannot take screenshot!");
-		}
-	}
+	
 	
 	
 	
@@ -273,13 +296,3 @@ public class CommonMethods extends PageInitializer {
 	
 	
 }
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
